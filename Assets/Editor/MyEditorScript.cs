@@ -11,7 +11,7 @@ public class MyEditorScript
 
             BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions
             {
-                scenes = scenes, target = BuildTarget.Android, locationPathName = @"\apk\consolebuild_%build.counter%.apk"
+                scenes = scenes, target = BuildTarget.Android, locationPathName = @"\apk\newconsolebuildname_%build.counter%.apk"
             };
             BuildPipeline.BuildPlayer(buildPlayerOptions);
         }
