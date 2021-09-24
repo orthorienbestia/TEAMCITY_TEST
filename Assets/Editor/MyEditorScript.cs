@@ -8,7 +8,12 @@ public class MyEditorScript
         try
         {
             string[] scenes = { "Assets/Scenes/MainScene.unity" };
-            BuildPipeline.BuildPlayer(scenes,"/home/akshay/Unity Projects/Cloud Build Test/Builds/androidbuild.apk",BuildTarget.Android,BuildOptions.None);
+
+            BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions
+            {
+                scenes = scenes, target = BuildTarget.Android
+            };
+            BuildPipeline.BuildPlayer(buildPlayerOptions);
         }
         catch (Exception e)
         {
